@@ -1,0 +1,19 @@
+query_prescription:
+ - action: click
+   locator: ['xpath', "//div[@class='side-bar-box']//span[contains(text(),'处方查询')]"]
+   name: 点击处方查询
+
+ - action: sleep_send
+   locator: ['css selector', "[placeholder='请输入姓名/手机号']"]
+   content: "{name}"
+   name: 输入姓名/手机号
+   sleep_time: 1
+
+ - action: click
+   locator: ['css selector',".search"]
+   name: 点击查询
+
+ - action: text
+   locator: ['xpath', "//div[@class='patient-info']/div/span"]
+   name: 获取第一条查到处方的，姓名信息
+   screen: 查询处方信息截图

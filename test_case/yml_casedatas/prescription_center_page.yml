@@ -1,0 +1,9 @@
+goto_prescription_create:
+ - action: click
+   locator: [xpath,"//div[@class='side-bar-box']//span[contains(text(),'处方创建')]"]
+   name: 点击处方创建
+
+goto_prescription_query:
+ - action: click
+   locator: [xpath,"//span[contains(text(),'处方查询')]"]
+   name: 点击处方查询

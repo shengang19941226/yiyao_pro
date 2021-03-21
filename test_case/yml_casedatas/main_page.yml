@@ -1,0 +1,5 @@
+goto_prescription_center:
+ - action: click
+   locator: [xpath,"//span[contains(text(),'处方中心')]"]
+   name: 点击处方中心
+

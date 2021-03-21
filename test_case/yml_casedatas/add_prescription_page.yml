@@ -1,0 +1,89 @@
+add_prescription_success:
+ - action: send
+   locator: ['css selector',"[placeholder='请输入'][maxlength='50']"]
+   content: "{patient_name}"
+   name: 输入患者姓名
+
+ - action: click
+   locator: ['xpath',"//span[contains(text(),'女')]"]
+   name: 选择性别
+
+ - action: send
+   locator: ['css selector',"[placeholder='请输入'][maxlength='3']"]
+   content: "{age}"
+   name: 输入年龄
+
+ - action: send
+   locator: ['css selector',"[placeholder='请输入'][maxlength='11']"]
+   content: "{phone}"
+   name: 输入手机号
+
+# - action: sleep_send
+#   locator: ['css selector',"[placeholder='请选择'].el-input__inner"]
+#   content: "{birthday}"
+#   name: 输入出生日期
+#   sleep_time: 2
+#
+# - action: click
+#   locator: ['xpath',"//label[@for='birthday']"]
+#   name: 去除出生日期的，选择器
+
+ - action: send
+   locator: ['css selector',"[placeholder='请输入'][maxlength='200']"]
+   content: "{detail_address}"
+   name: 输入详细地址
+
+ - action: click
+   locator: ['xpath',"//div[@class='el-cascader el-cascader--medium']//input[@placeholder='请选择']"]
+   name: 展开省市区
+
+ - action: sleep_click
+   locator: ['xpath',"//span[contains(text(),'台湾')]"]
+   sleep_time: 0.5
+   name: 点击省
+
+ - action: sleep_click
+   locator: ['xpath',"//span[contains(text(),'台中市')]"]
+   sleep_time: 0.5
+   name: 点击市
+
+ - action: sleep_click
+   locator: ['xpath',"//span[contains(text(),'龙井区')]"]
+   sleep_time: 0.5
+   name: 点击区
+
+ - action: click
+   locator: ['xpath',"//button[@type='button']//i[@class='el-icon-plus']"]
+   name: 点添加药材
+
+ - action: send
+   locator: ['xpath',"//input[@placeholder='请输入关键词']"]
+   content: "{medicinal_name}"
+   name: 输入药材名称
+
+ - action: click
+   locator: ['xpath',"//ul[@class='el-scrollbar__view el-select-dropdown__list']/li"]
+   name: 选择联想的药材第一个
+
+ - action: send
+   locator: ['xpath',"//div[@class='el-input-number el-input-number--small']//input[@max='99999']"]
+   content: "{medicinal_num}"
+   name: 输入药材数量
+
+ - action: click
+   locator: ['xpath',"//*[contains(text(),'创建处方')]"]
+   name: 点创建处方按钮
+
+ - action: click
+   locator: ['xpath',"//button[@class='el-button el-button--primary el-button--small']"]
+   name: 点处方展示，确定按钮
+
+ - action: click
+   locator: ['xpath',"//button[@class='el-button el-button--default el-button--small el-button--primary ']"]
+   name: 点处方二次确认按钮，确定
+   screen: 创建失败截图
+
+ - action: click
+   locator: ['xpath',"//*[@class='el-notification__closeBtn el-icon-close']"]
+   name: 点击创建失败toast提示的，关闭
+
