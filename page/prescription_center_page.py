@@ -1,6 +1,6 @@
-from add_prescription_page import AddPrescriptionPage
-from base_page_web import BasePage
-from query_prescription_page import QueryPrescriptionPage
+from page.add_prescription_page import AddPrescriptionPage
+from page.base_page_web import BasePage
+from page.query_prescription_page import QueryPrescriptionPage
 
 
 class PrescriptionCenterPage(BasePage):

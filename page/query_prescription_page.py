@@ -1,4 +1,4 @@
-from base_page_web import BasePage
+from page.base_page_web import BasePage
 
 
 class QueryPrescriptionPage(BasePage):

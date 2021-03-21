@@ -1,5 +1,4 @@
 import yaml
-from common.log_main import logger
 
 def black_handle(fun):
     def run(*args,**kwargs):

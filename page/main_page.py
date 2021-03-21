@@ -1,4 +1,4 @@
-from prescription_center_page import PrescriptionCenterPage
+from page.prescription_center_page import PrescriptionCenterPage
 from page.base_page_web import BasePage
 
 class MainPage(BasePage):

@@ -8,7 +8,7 @@ import selenium.webdriver.support.expected_conditions as EC
 from selenium.common.exceptions import *
 from selenium import webdriver
 from common.log_main import logger
-from black_handle import black_handle
+from page.black_handle import black_handle
 from selenium.webdriver import DesiredCapabilities
 import configparser
 from selenium.webdriver.chrome.options import Options
