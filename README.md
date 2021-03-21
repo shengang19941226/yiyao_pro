@@ -8,4 +8,5 @@
 - [page层+底层框架](/page)
 - [截图存放](/screenshots)
 - [用例层](/test_case)
+- [测试报告](/allure-results)
 
