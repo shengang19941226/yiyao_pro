@@ -65,7 +65,23 @@ class BasePage:
         return _driver
 
     def max_size(self):
+        '''窗口最大化'''
         self._driver.maximize_window()
+
+    def set_window_size(self,width=1920, height=1080, windowHandle='current'):
+        '''自定义窗口'''
+        self._driver.set_window_size(width, height, windowHandle)
+
+    def get_screen(self):
+        js = 'var winW = window.screen.width;var winH = window.screen.height;alert(winW+","+winH)'
+        self._driver.execute_script(js)
+        line = self._driver.switch_to.alert.text
+        self._driver.switch_to.alert.accept()
+        size = line.split(',')
+        Screen = {}
+        Screen['width'] = int(size[0])
+        Screen['height'] = int(size[1])
+        return Screen
 
     def quit(self):
         '''退出浏览器'''

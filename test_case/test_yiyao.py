@@ -12,7 +12,7 @@ class TestYiYao:
         self.main = MainPage(url='http://partner.zhyf.sfrog.cn/#/workbench/index')
         self.main.add_cookie('../datas/cookie.json')
         self.main.refresh()
-        self.main.max_size()
+        self.main.set_window_size(1920, 1080)
 
     def teardown(self):
         self.main.quit()
