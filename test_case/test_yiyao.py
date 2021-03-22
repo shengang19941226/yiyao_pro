@@ -27,4 +27,4 @@ class TestYiYao:
         pytest.assume(res == name)
 
 if __name__ == '__main__':
-    pytest.main(['test_yiyao.py','-sq','--alluredir=../reports/xml'])
+    pytest.main(['test_yiyao.py','-sq'])
